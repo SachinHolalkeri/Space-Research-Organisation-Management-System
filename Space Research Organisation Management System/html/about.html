@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+    <title>Space|About us</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-decoration-break: slice;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/Light-sky-stars-background.jpg);
+    background-size: cover;}
+
+.site-headers{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    opacity: 1;
+    color: #ddd;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+}
+
+.logo{
+    width: 50%;
+    height: 100px;
+    background: transparent;
+    opacity; 3px;
+    font-size: 16px;
+}
+
+.logo h1{
+    line-height: 90px;
+    padding-left: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.menu{
+    width: 50%;
+    height: 100px;
+}
+
+.menu {
+    widows: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu a button{
+    color: white;
+list-style: none;
+font-size: 18px;
+font-weight: 630;
+text-transform: uppercase;
+   padding: 50px 30px 15px 30px;
+    background: transparent;
+    border:none;
+    border-radius: 40px;
+    font-weight: 549;
+    letter-spacing: 1px;
+}
+
+    .tab {
+  overflow: hidden;
+        display: inline-block;
+        cursor: pointer;
+    border: none;
+        margin: none;
+        background: transparent;
+}
+
+.tab button {
+  color: white;
+    background-color: inherit;
+  flex-direction: column;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ffaa22;transition: 3s;
+}
+
+.tab button.active {
+  background-color: #ffaa22;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+}
+    .smenu{
+    position: absolute;
+    list-style-type: none;
+    margin: auto;
+    padding: 25px 0px 25px 0px;
+    opacity: 0;
+}
+
+.smenu option{
+    color: white;
+list-style: none;
+    text-decoration: none;
+font-size: 15px;
+    display: flex;
+    flex-direction: column;
+font-weight: 630;
+    padding: 10px 0px 10px 0px;
+    background: transparent;
+    border:none;
+    border-radius: 40px;
+    font-weight: 549;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.smenu:hover{
+    opacity: inherit;
+}
+
+.cool-link::before{
+    content:'';
+    position: absolute;
+    background: red;
+}
+.cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    background: white;
+    transition: .6s;
+}
+
+.cool-link:hover::after{
+    transition: .5s;
+    width: 100%;
+    height: 3px;
+    
+}
+section{
+    display:flex;
+}
+
+.main-body{
+    width: 55%;
+    height: 100px;
+    color: #ff6600;
+    margin-top: -30px;
+    background: transparent;
+    padding: 40px;
+}
+    .main-body button{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: none;
+    border: none;
+}
+    
+.main-body h3{
+    width: 100%;
+    height: 10px;
+    font-size: 1.1rem;
+    padding: 10px;
+    letter-spacing: 1.5px;
+}
+    .main-body p{
+        color: white;}
+
+</style>
+</head>
+<body>
+    <header class="site-headers">
+    <nav>
+        <div class="logo">
+            <h1>
+                Space Research Organisation
+            </h1>
+        </div>
+        <div class="menu">
+            <a href="logiiin.html" class="cool-link"><button> Home</button></a>
+            <a href="#" class="cool-link"><button onclick="myFunction()" class="drop">menu
+                <div class="smenu">
+                    <option type="button" href="about.html">Missions</option>
+                    <option type="button" href="about.html">Rockets</option>
+                    <option type="button" href="about.html">Satellites</option>
+                </div></button>
+            </a>
+            <a href="about.html" class="cool-link"><button>About us</button></a>
+            <a href="#" class="cool-link"><button>Contact</button></a>
+        </div>
+        </nav>
+    <section>
+        <div class="leftside"> </div>
+        <div class="main-body">
+            <h1> About Us</h1>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Vision')">Vision</button>
+                <button class="tablinks" onclick="openCity(event, 'Mission')">Mission</button>
+                <button class="tablinks" onclick="openCity(event, 'Objectives')">Objectives</button>
+            </div>
+            <div id="Vision" class="tabcontent">
+                <h3>Vision</h3>
+                    <p>Harness space technology for national development, while pursuing space science research and planetary exploration.</p>
+            </div>
+
+            <div id="Mission" class="tabcontent">
+                <h3>Mission</h3>
+                    <p>Design and development of launch vehicles and related technologies for providing access to space.<br/>
+Design and development of satellites and related technologies for earth observation, communication, navigation, meteorology and space science.<br/>
+Indian National Satellite (INSAT) programme for meeting telecommunication, television broadcasting and developmental applications.<br/>
+Indian Remote Sensing Satellite (IRS) programme for management of natural resources and monitoring of environment using space based imagery.<br/>
+Space based Applications for Societal development.<br/>
+Research and Development in space science and planetary exploration.</p> 
+            </div>
+
+            <div id="Objectives" class="tabcontent">
+                <h3>Objectives</h3>
+                    <p>Operational flights of Polar Satellite Launch Vehicle (PSLV).<br/>
+Developmental flight of Geo-synchronous Satellite Launch Vehicle (GSLV- Mk II).<br/>
+Development of heavy lift Geo-synchronous Satellite Launch Vehicle (GSLV-Mk III).<br/>
+Design, Development and Realization of Communication Satellites.<br/>
+Design, Development and Realization of Earth Observation Satellites.<br/>
+Development of Navigation Satellite Systems.<br/>
+Development of satellites for Space Science and Planetary Exploration.<br/>
+Earth Observation Applications.<br/>
+Space based systems for Societal Applications.<br/>
+Advanced Technologies and newer initiatives.<br/>
+Training, Capacity building and Education.<br/>
+Promotion of Space technology.<br/>
+Infrastructure / Facility Development for space research.<br/>
+International Cooperation.</p>
+            </div>
+        </div>
+    </section>
+    </header>
+    <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+    
+}
+</script>
+</body>
+</html>
